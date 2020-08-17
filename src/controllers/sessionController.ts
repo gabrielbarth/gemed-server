@@ -1,12 +1,14 @@
 import { Request, Response } from 'express';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken'; 
-
+//@ts-ignore
 import authConfig from '../config/auth';
 
-import User from '../database/models/User'
+
+import User, { IUser } from '../database/models/User'
 
 class AuthController {
+  
   async store(request: Request, response: Response) {
     try {
       const { name, password } = request.body;
@@ -20,7 +22,7 @@ class AuthController {
       if(!await bcrypt.compare(password, user.password)){
         return response.status(400).json({ error: "Invalid password" });
       }
-
+       //@ts-ignore
       user.password = undefined;
 
       const token = jwt.sign({ id: user.id }, authConfig.secret, {

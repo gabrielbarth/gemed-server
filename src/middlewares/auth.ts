@@ -1,8 +1,9 @@
+import { Request, Response, NextFunction } from 'express';
 import jwt from 'jsonwebtoken';
+//@ts-ignore
+import authConfig from '../config/auth';  
 
-import authConfig from '../config/auth.json';
-
-export default async (request, response, next) => {
+export default async (request: Request, response: Response, next: NextFunction) => {
   const authHeader = request.headers.authorization;
 
   if (!authHeader) {
@@ -11,8 +12,9 @@ export default async (request, response, next) => {
 
   // ['bearer', 'token']
   const parts = authHeader.split(' ');
-
+  //@ts-ignore
   if(!parts.length === 2) {
+   
     return response.status(401).json({ error: 'Token error' });
   }
 
@@ -21,11 +23,13 @@ export default async (request, response, next) => {
   if(!/^Bearer$/i.test(scheme)){
     return response.status(401).json({ error: 'Token malformatted' });
   }
-
-  jwt.verify(token, authConfig.secret, (err, decoded) => {
+  //@ts-ignore
+  jwt.verify(token, authConfig.secret, (err, decoded) => { 
+    
     if (err) return response.status(401).json({ error: 'Token invalid' });
-
-    request.userId = decoded.id;
+    //@ts-ignore
+    request.userId = decoded.id; 
+    
     return next();
   });
 };

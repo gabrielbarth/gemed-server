@@ -10,7 +10,7 @@ class UserController {
   async store(request: Request, response: Response) {
     try {
       const user = await User.create(request.body);
-
+      //@ts-ignore
       user.password = undefined;
 
       return response.status(201).json(user);

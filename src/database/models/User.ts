@@ -1,13 +1,14 @@
 import mongoose from '../connection';
 import bcrypt from 'bcryptjs';
+import { Document, Schema } from 'mongoose';
 
-// interface User {
-//   name: string;
-//   password: string;
-//   createdAt: Date;
-// }
+export interface IUser extends Document {
+  name: string;
+  password: string;
+  createdAt: Date;
+}
 
-const UserSchema = new mongoose.Schema({
+const UserSchema : Schema = new Schema({
   name: {
     type: String,
     required: true
@@ -24,12 +25,14 @@ const UserSchema = new mongoose.Schema({
 });
 
 UserSchema.pre('save', async function(next){
+  //@ts-ignore
   const hash = await bcrypt.hash(this.password, 8);
+  //@ts-ignore
   this.password = hash;
 
   next();
 })
 
-const User = mongoose.model('User', UserSchema);
+const User = mongoose.model<IUser>('User', UserSchema);
 
 export default User;

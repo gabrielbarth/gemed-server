@@ -5,12 +5,15 @@ import InternalCommunication from '../database/models/InternalCommunication'
 
 class ValidityController {
   async store(request: Request, response: Response) {
-    try {
+    try { 
+      //@ts-ignore
       ExternalCommunication.counterReset('ec_number', function(err){
+        
         console.log(err);
       })
-
+      //@ts-ignore
       InternalCommunication.counterReset('ic_number', function(err){
+        
         console.log(err);
       })
       
