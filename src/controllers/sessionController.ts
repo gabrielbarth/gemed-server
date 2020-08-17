@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken'; 
 //@ts-ignore
-import authConfig from '../config/auth';
+import authConfig from '../config/authSecret';
 
 
 import User, { IUser } from '../database/models/User'
