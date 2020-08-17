@@ -1,4 +1,4 @@
-import express, { json } from 'express';
+import express from 'express';
 import cors from 'cors';
 import routes from './routes';
 
@@ -12,4 +12,4 @@ app.use(routes);
 //   console.log("Back-end started! 🚀🚀 ")
 // });
 
-app.listen(process.env.PORT);
+app.listen(process.env.PORT || 3333);
