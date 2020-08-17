@@ -30,6 +30,6 @@ routes.get('/external-communications', externalCommunicationController.index);
 routes.put('/external-communications/:communicationId', externalCommunicationController.update);
 routes.delete('/external-communications/:communicationId', externalCommunicationController.delete);
 
-routes.post('/renewconsole.log(err);', validityController.store);
+routes.post('/renew', validityController.store);
 
 export default routes;

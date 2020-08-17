@@ -12,4 +12,4 @@ app.use(routes);
 //   console.log("Back-end started! 🚀🚀 ")
 // });
 
-app.listen(process.env.PORT || 3333);
+app.listen(process.env.PORT || 3000);
