@@ -17,7 +17,7 @@ Application for generate ID and register communications on public relationship
 
 ##  :mag_right:  Overview 
 :us:
-This application was developed using ReactJS and TypeScript. It functionalities is:
+This application was developed using Node.js and TypeScript. It functionalities is:
 
 - Routes to list, create, update and remove Internal Communications;
 - Routes to list, create, update and remove External Communications;
@@ -25,7 +25,7 @@ This application was developed using ReactJS and TypeScript. It functionalities 
 - Route for jwt authentication;
 
 <span>&#x1f1e7;&#x1f1f7;</span>
-Aplicação desenvolvida com ReactJS e TypeScript. Suas funcionalidades são:
+Aplicação desenvolvida com Node.js e TypeScript. Suas funcionalidades são:
 
 - Rotas para listar, criar, atualizar e remover Comunicações Internas (internal-communications);
 - Rotas para listar, criar, atualizar e remover Ofícios (external-communications);
