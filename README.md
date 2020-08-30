@@ -35,11 +35,11 @@ Aplicação desenvolvida com ReactJS e TypeScript. Suas funcionalidades são:
 ##  :desktop_computer:  Viewing on Insomnia
 
 <p align="center">
-  <img alt="list-cis.GIF" title="html-image" src="./images/img4.png" width="900px" /> 
+  <img alt="list-cis" title="html-image" src="./images/img4.png" width="900px" /> 
 </p>
 
 <p align="center">
-  <img alt="auth.GIF" title="html-image" src="./images/img5.png" width="900px" /> 
+  <img alt="auth" title="html-image" src="./images/img5.png" width="900px" /> 
 </p>
 
 
