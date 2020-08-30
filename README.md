@@ -1,10 +1,8 @@
 <h1 align="center">
 
 ![gemed-logo](./images/gemed.png)
-  
-<br>
-<br>
-GEMED COMMUNICATIONS (BACK-END)
+
+GEMED communications (Back-end version)
 </h1>
 
 <br>
@@ -12,12 +10,8 @@ GEMED COMMUNICATIONS (BACK-END)
 Application for generate ID and register communications on public relationship 
 </p>
 
-<br>
-<br>
-
 <h3 align="center">
-  :computer: Front-end [HERE](https://github.com/gabrielbarth/gemed-web)
-  <br>
+:computer: Front-end version <a href="https://github.com/gabrielbarth/gemed-web">here</a>
 </h3>
 
 
