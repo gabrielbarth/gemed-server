@@ -36,7 +36,7 @@ class InternalCommunicationController {
       const communications = await InternalCommunication.find()
         .limit(limitContent)
         .skip((currentPage - 1) * limitContent)
-        .sort({ic_number: -1});
+        .sort({date: -1});
       
       return response.json(communications);       
 

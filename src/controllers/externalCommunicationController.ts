@@ -36,7 +36,7 @@ class ExternalCommunicationController {
       const communications = await ExternalCommunication.find()
         .limit(limitContent)
         .skip((currentPage - 1) * limitContent)
-        .sort({ec_number: -1});
+        .sort({date: -1});
       
       return response.json(communications);       
 
